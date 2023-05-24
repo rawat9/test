@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-fixture('Fixture').page('http://localhost:4200/');
+fixture('Fixture').page('https://rawat9.github.io/test/');
 
 test('should click the button and open dialog', async (t) => {
   const button = Selector('button').withAttribute(
