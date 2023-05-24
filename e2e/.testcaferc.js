@@ -1,6 +1,6 @@
 module.exports = {
   browsers: 'chrome',
-  clientScripts: [{module: 'axe-core/axe.min.js'}],
+  clientScripts: [{ module: 'axe-core/axe.min.js' }],
   src: ['e2e/tests/*.e2e-spec.ts'],
   screenshots: {
     path: 'tmp/screenshots/',

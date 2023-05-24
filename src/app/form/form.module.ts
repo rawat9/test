@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { FormlyModule } from '@ngx-formly/core';
 import { MatButtonModule } from '@angular/material/button';
-import {FormComponent} from "./form.component";
+import { FormComponent } from './form.component';
 
 @NgModule({
   declarations: [FormComponent],
@@ -15,10 +15,10 @@ import {FormComponent} from "./form.component";
     FormlyMaterialModule,
     FormlyModule.forRoot({
       validationMessages: [
-        {name: 'required', message: 'This field is required'},
+        { name: 'required', message: 'This field is required' },
       ],
     }),
   ],
-  exports: [FormComponent]
+  exports: [FormComponent],
 })
 export class FormModule {}
