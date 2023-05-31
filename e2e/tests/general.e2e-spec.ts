@@ -12,9 +12,9 @@ test('should click the button and open dialog', async (t) => {
     'test-form-dialog'
   );
 
-  const ageField = Selector('#formly_2_input__1')
+  const numberField = Selector('#formly_2_input__1')
 
   await t.click(button);
-  await t.typeText(ageField, '3')
+  await t.typeText(numberField, '3')
   await t.expect(formDialog.visible).eql(true)
 });

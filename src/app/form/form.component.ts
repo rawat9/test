@@ -5,7 +5,6 @@ import { FormlyFieldConfig } from "@ngx-formly/core";
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
 })
 export class FormComponent {
   form = new FormGroup({});
@@ -26,8 +25,4 @@ export class FormComponent {
       }
     }
   ];
-
-  onSubmit() {
-    console.log('submit')
-  }
 }

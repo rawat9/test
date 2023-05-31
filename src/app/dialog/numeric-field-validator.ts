@@ -5,7 +5,6 @@ import {AbstractControl, ValidationErrors} from '@angular/forms';
  * @param control The FormControl of the form field in question
  */
 export function numericFieldValidator(control: AbstractControl): ValidationErrors | null {
-  console.log(control);
   if (control.value === undefined) {
     return {numericFieldValidator: true};
   }
