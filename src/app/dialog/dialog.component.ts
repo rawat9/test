@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 interface DialogData {
@@ -10,13 +10,18 @@ interface DialogData {
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
 })
-export class DialogComponent {
+export class DialogComponent implements AfterContentChecked {
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private changeDetector: ChangeDetectorRef,
+) {}
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges()
   }
 }

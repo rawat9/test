@@ -1,4 +1,10 @@
-<h1 mat-dialog-title>Form</h1>
-<div mat-dialog-content>
-  <app-form></app-form>
+<div data-test-id="test-form-dialog">
+  <h1 mat-dialog-title>Form</h1>
+  <div mat-dialog-content>
+    <app-form />
+  </div>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary">Submit</button>
+    <button mat-raised-button (click)="onNoClick()">Close</button>
+  </mat-dialog-actions>
 </div>
