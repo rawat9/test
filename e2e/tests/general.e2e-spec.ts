@@ -16,6 +16,7 @@ test('should click the button and open dialog', async (t) => {
 
   await t.click(button);
   await t.expect(numberField.visible).ok()
+  await t.debug()
   await t.typeText(numberField, '3')
   await t.expect(formDialog.visible).eql(true)
 });
